@@ -21,14 +21,17 @@ $(document).ready(function () {
 
             listItem.innerHTML = `
                 <div class="row align-items-center text-white">
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         <img src="${shopping.image}" alt="product" class="img-fluid">
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <div class="title">${shopping.title}</div>
                     </div>
                     <div class="col-md-2">
                         <div class="price">${shopping.price} $</div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="price">${shopping.quantity}</div>
                     </div>
                     <div class="col-md-2">
                         <button class="btn btn-delete">
@@ -38,7 +41,7 @@ $(document).ready(function () {
                 </div>
             `;
 
-            cardlist.append(listItem);
+            cardlist.appendchild(listItem);
         }
 
         removeCard() {
