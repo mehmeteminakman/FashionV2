@@ -1,13 +1,13 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <img  style="margin: auto; align-items: center;"   src="" alt="">
+    <img  style="margin: auto; align-items: center;"   src= "http://localhost/proje1/PHP%20Folders/Resimler1/Fashion-logos_black.png" alt="">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown">
-          <a class="nav-link"  href="anasayfa.html" style="font-size:25px ;">Home</i></a>
+          <a class="nav-link"  href="mainPage.php" style="font-size:25px ;">Home</i></a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size:25px ;">
@@ -52,12 +52,12 @@
       </ul>
       <ul class="nav-item userBuy dropdown ">
         <li>
-          <a href=""><i class="fa-solid fa-user fa-lg userButton fa-xl" ></i></a>
+          <a href=""><i  style="margin-top: 25px;" class="fa-solid fa-user  userButton fa-xl" ></i></a>
         </li>
       </ul>
       <div class="shopping-cart position-relative">
 
-        <button type="button" class="btn-card btn btn-primary position-relative">
+        <button type="button" class="btn-card btn btn-primary position-relative" style="margin-right: 110px;">
           <i class="fas fa-shopping-cart"></i>
           <span id="item-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill countColor mt-2">0</span>
         </button>

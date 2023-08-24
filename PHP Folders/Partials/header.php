@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="carousel.css">
     <link rel="stylesheet" href="4resimliRow.css">
     <link rel="stylesheet" href="bestSellers.css">
-    <link rel="stylesheet" href="superSale.css">
     <link rel="stylesheet" href="footer.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="shoppingCart.css">

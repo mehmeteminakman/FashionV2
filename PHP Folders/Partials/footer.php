@@ -1,4 +1,4 @@
-<div class="footer row">
+<div class="footer row" style="margin-top: 170px;">
    <div class="col-4">
     <ul>
       <li>
@@ -17,7 +17,7 @@
     </ul>
    </div>
    <div class="col-4">
-    <img style="height: 150px;" src="/Resimler/Fashion-logos_black.png" alt="">
+    <img style="height: 150px;" src="http://localhost/proje1/PHP%20Folders/Resimler1/Fashion-logos_black.png" alt="">
     <ul>
       <li class="socialLogo">
         <a href=""><i class="fa-brands fa-instagram fa-xl"> </i></a>

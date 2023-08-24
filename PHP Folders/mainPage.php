@@ -6,28 +6,28 @@ $bestSellers= [
   "card-title"=>"THE ROLLING STONES T-SHIRT",
   "oldPrice"=>100,
   "price"=>80,
-  "image"=>"/Resimler/ürün1.jpg"
+  "image"=>"http://localhost/proje1/PHP%20Folders/Resimler1/ürün1.jpg"
 ],
 [
   "id"=>2,
   "card-title"=>"FOO FIGHTERS T-SHIRT",
   "oldPrice"=>110,
   "price"=>60,
-  "image"=>"/Resimler/ürün2.jpg"
+  "image"=>"http://localhost/proje1/PHP%20Folders/Resimler1/ürün2.jpg"
 ],
 [
   "id"=>3,
   "card-title"=>"ONE PIECE  T-SHIRT",
   "oldPrice"=>120,
   "price"=>60,
-  "image"=>"/Resimler/ürün4.jpg"
+  "image"=>"http://localhost/proje1/PHP%20Folders/Resimler1/ürün4.jpg"
 ],
 [
   "id"=>4,
   "card-title"=>"GREEN T-SHIRT GARMENT DYED EMBROIDERED",
   "oldPrice"=>105,
   "price"=>60,
-  "image"=>"/Resimler/ürün7.jpg"
+  "image"=>"http://localhost/proje1/PHP%20Folders/Resimler1/urun7.jpg"
 ]
 ]
   
@@ -61,17 +61,51 @@ $bestSellers= [
 
   <?php foreach ($bestSellers as $bestseller ): {} ?>
     <div class="card cardİmg" style="width: 18rem; border-width: 1px; border-style:outset; border-color: white; ">
-     <img src=<?php echo $bestseller["image"]?>class="card-img-top"  alt="...">
+     <img src=<?php  echo $bestseller['image']?> class="card-img-top"  alt="..."/>
      <div class="card-body bestsellers">
        <a href=""><h5 class="card-title"><?php echo $bestseller["card-title"]?></h5></a>
        <p class="card-text"></p>
        <p class="pricefirst" style="text-decoration:line-through;"><?php echo $bestseller["oldPrice"]."$"?></p>
        <p class="pricesecond price" id="sell"> <?php echo $bestseller["price"]."$"?></p>
-       <a name="<?php print $bestseller["card-title"]?>" res="<?php echo $bestseller["image"]?>"  price=<?php echo $bestseller["price"]?> class="btn btn-danger text-white btnAdd addBtColor" href="#" style="margin-top:55px ;">Add to Cart</a>
+       <a name="<?php echo $bestseller["card-title"]?>" res="<?php echo $bestseller["image"]?>"  price=<?php echo $bestseller["price"]?> class="btn btn-danger text-white btnAdd addBtColor" href="#" style="margin-top:55px ;">Add to Cart</a>
      </div>
    </div>
    <?php endforeach; ?>
+<!-- BEST SELLERS-->
+<?php include("Partials/footer.php")?>
+
+
+
+
+
+
+
+
+
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
 

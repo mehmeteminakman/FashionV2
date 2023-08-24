@@ -1,17 +1,17 @@
 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="height: auto;">
   <div class="carousel-inner">
     <div class="carousel-item active" >
-      <img src="/Resimler/avancecro_1.jpg" class="d-block w-100 "alt="...">
+      <img src="http://localhost/proje1/PHP%20Folders/Resimler1/avancecro_1.jpg" class="d-block w-100 "alt="...">
       <div class="carousel-caption d-none d-md-block">
       </div>
     </div>
     <div class="carousel-item" >
-      <img src="/Resimler/denimcro_4.jpg" class="d-block w-100" alt="...">
+      <img src="http://localhost/proje1/PHP%20Folders/Resimler1/denimcro_4.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
       </div>
     </div>
     <div class="carousel-item" >
-      <img src="/Resimler/resim3.jpg" class="d-block w-100" alt="...">
+      <img src="http://localhost/proje1/PHP%20Folders/Resimler1/resim3.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
       </div>
     </div>
