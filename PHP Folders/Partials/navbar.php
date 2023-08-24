@@ -62,8 +62,8 @@
           <span id="item-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill countColor mt-2">0</span>
         </button>
           <div class="shopping-cart-list bg-dark d-none shoppingCarttext">
-          <b class="fs-5 text-white my-3 ">Shopping Cart</b>
-          <div> <b pricedata="0" class="total" style="margin-left: 15px;">Total : <span class="totalYaz">0</span><span>$</span> </b></div>
+          <b class="fs-3 text-white " style="margin-left: 90px;">Shopping Cart</b>
+          <div> <b pricedata="0" class="total" style="margin-left: 120px;">Total Price : <span class="totalYaz">0</span><span>$</span> </b></div>
           
 
          </div>

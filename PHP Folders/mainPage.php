@@ -72,6 +72,11 @@ $bestSellers= [
    </div>
    <?php endforeach; ?>
 <!-- BEST SELLERS-->
+
+
+
+
+
 <?php include("Partials/footer.php")?>
 
 

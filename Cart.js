@@ -1,0 +1,3 @@
+var deneme=$("#sell").text();
+
+
