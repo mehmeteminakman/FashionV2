@@ -119,7 +119,6 @@ $(document).ready(function () {
         const price = parseInt($(this).attr("price"));
         const title = $(this).attr("name");
         const image = $(this).attr("res");
-        const size= size2;
 
         const existingItem = addedItems.find(item => item.title === title);
         if (existingItem) {
