@@ -10,7 +10,6 @@ $(document).ready(function () {
             this.image = image;
             this.title = title;
             this.price = price;
-            this.size = size;
             this.quantity = 1;
         }
     }
@@ -33,9 +32,6 @@ $(document).ready(function () {
                     </div>
                     <div class="col-md-1">
                         <div class="price">${shopping.quantity}</div>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="price">${shopping.size}</div>
                     </div>
                     <div class="col-md-2">
                         <button class="btn btn-delete">
