@@ -30,7 +30,6 @@ $bestSellers= [
   "image"=>"http://localhost/proje1/PHP%20Folders/Resimler1/urun7.jpg"
 ]
 ]
-  
 ?>
 
 
@@ -64,10 +63,23 @@ $bestSellers= [
      <img src=<?php  echo $bestseller['image']?> class="card-img-top"  alt="..."/>
      <div class="card-body bestsellers">
        <a href=""><h5 class="card-title"><?php echo $bestseller["card-title"]?></h5></a>
-       <p class="card-text"></p>
+       <p class="card-text">
+       </p>
        <p class="pricefirst" style="text-decoration:line-through;"><?php echo $bestseller["oldPrice"]."$"?></p>
        <p class="pricesecond price" id="sell"> <?php echo $bestseller["price"]."$"?></p>
-       <a name="<?php echo $bestseller["card-title"]?>" res="<?php echo $bestseller["image"]?>"  price=<?php echo $bestseller["price"]?> class="btn btn-danger text-white btnAdd addBtColor" href="#" style="margin-top:55px ;">Add to Cart</a>
+       <div class="btn-group">
+         <button class="btn btn-secondary btn-sm dropdown-toggle Size" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            SIZE
+          </button>
+           <ul class="dropdown-menu">
+           <li><a class="dropdown-item"  size ="XS" href="#">XS</a></li>
+           <li><a class="dropdown-item"  size ="S" href="#">S</a></li>
+           <li><a class="dropdown-item"  size ="M" href="#">M</a></li>
+           <li><a class="dropdown-item"  size ="L" href="#">L</a></li>
+           <li><a class="dropdown-item"  size ="XL" href="#">XL</a></li>
+           </ul>
+       </div>
+       <a name="<?php echo $bestseller["card-title"]?>" res="<?php echo $bestseller["image"]?>"  price=<?php echo $bestseller["price"]?> size="M" class="btn btn-danger text-white btnAdd addBtColor" href="#" style="margin-top:55px ;">Add to Cart</a>
      </div>
    </div>
    <?php endforeach; ?>

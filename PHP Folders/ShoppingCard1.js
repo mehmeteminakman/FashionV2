@@ -6,10 +6,11 @@ $(document).ready(function () {
     let totalAmount = 0;
 
     class Shopping {
-        constructor(image, title, price) {
+        constructor(image, title, price,size) {
             this.image = image;
             this.title = title;
             this.price = price;
+            this.size = size;
             this.quantity = 1;
         }
     }
@@ -21,10 +22,10 @@ $(document).ready(function () {
 
             listItem.innerHTML = `
                 <div class="row align-items-center text-white">
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <img src="${shopping.image}" alt="product" class="img-fluid">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="title">${shopping.title}</div>
                     </div>
                     <div class="col-md-2">
@@ -32,6 +33,9 @@ $(document).ready(function () {
                     </div>
                     <div class="col-md-1">
                         <div class="price">${shopping.quantity}</div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="price">${shopping.size}</div>
                     </div>
                     <div class="col-md-2">
                         <button class="btn btn-delete">
@@ -94,17 +98,38 @@ $(document).ready(function () {
     ui.removeCard();
     ui.initializeCart();
 
+
+
+    
+    
+    
+    
+    $(".dropdown-item").on("click", function (event) {
+        event.preventDefault();
+        const size1 = $(this).attr("size");
+        //console.log(size);
+        var size2=$(".btnAdd").attr("size");
+        size2=size1;
+        console.log(size2); 
+
+    });
+
+
+
+
+
     $(".btnAdd").on("click", function (event) {
         event.preventDefault();
         const price = parseInt($(this).attr("price"));
         const title = $(this).attr("name");
         const image = $(this).attr("res");
+        const size= size2;
 
         const existingItem = addedItems.find(item => item.title === title);
         if (existingItem) {
             existingItem.quantity++;
         } else {
-            const shopping = new Shopping(image, title, price);
+            const shopping = new Shopping(image, title, price,size);
             addedItems.push(shopping);
             ui.addToCart(shopping);
         }
