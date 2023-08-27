@@ -41,7 +41,7 @@ $(document).ready(function () {
                 </div>
             `;
 
-            cardlist.appendchild(listItem);
+            cardlist.append(listItem);
         }
 
         removeCard() {
@@ -94,7 +94,7 @@ $(document).ready(function () {
     ui.removeCard();
     ui.initializeCart();
 
-    $(".btnAdd").on("click", function () {
+    $(".btnAdd").on("click", function (event) {
         event.preventDefault();
         const price = parseInt($(this).attr("price"));
         const title = $(this).attr("name");
