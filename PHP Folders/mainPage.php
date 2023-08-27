@@ -58,7 +58,7 @@ $bestSellers= [
 
 
 
-  <?php foreach ($bestSellers as $bestseller ): {} ?>
+   <?php foreach ($bestSellers as $bestseller ): {} ?>
     <div class="card cardİmg" style="width: 18rem; border-width: 1px; border-style:outset; border-color: white; ">
      <img src=<?php  echo $bestseller['image']?> class="card-img-top"  alt="..."/>
      <div class="card-body bestsellers">
@@ -68,7 +68,7 @@ $bestSellers= [
        <p class="pricefirst" style="text-decoration:line-through;"><?php echo $bestseller["oldPrice"]."$"?></p>
        <p class="pricesecond price" id="sell"> <?php echo $bestseller["price"]."$"?></p>
        <div class="btn-group">
-         <button class="btn btn-secondary btn-sm dropdown-toggle Size" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+         <button class="btn btn-secondary btn-sm dropdown-toggle Size" id="seeSize"   type="button" data-bs-toggle="dropdown" aria-expanded="false">
             SIZE
           </button>
            <ul class="dropdown-menu">
@@ -79,11 +79,14 @@ $bestSellers= [
            <li><a class="dropdown-item"  size ="XL" href="#">XL</a></li>
            </ul>
        </div>
-       <a name="<?php echo $bestseller["card-title"]?>" res="<?php echo $bestseller["image"]?>"  price=<?php echo $bestseller["price"]?> size="M" class="btn btn-danger text-white btnAdd addBtColor" href="#" style="margin-top:55px ;">Add to Cart</a>
+       <a name="<?php echo $bestseller["card-title"]?>" res="<?php echo $bestseller["image"]?>"  price=<?php echo $bestseller["price"]?> size="0" class="btn btn-danger text-white btnAdd addBtColor"  href="#" style="margin-top:55px ;">Add to Cart</a>
      </div>
    </div>
-   <?php endforeach; ?>
+   <?php endforeach; ?> 
 <!-- BEST SELLERS-->
+
+
+
 
 
 
