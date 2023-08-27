@@ -103,7 +103,7 @@ $(document).ready(function () {
     $(".dropdown-item").on("click", function (event) {
         event.preventDefault();
         const size1 = $(this).attr("size");
-        console.log(size);
+        console.log(size1);
     });
 
 
