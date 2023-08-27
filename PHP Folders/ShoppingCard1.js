@@ -6,7 +6,7 @@ $(document).ready(function () {
     let totalAmount = 0;
 
     class Shopping {
-        constructor(image, title, price,size) {
+        constructor(image, title, price) {
             this.image = image;
             this.title = title;
             this.price = price;
@@ -107,11 +107,7 @@ $(document).ready(function () {
     $(".dropdown-item").on("click", function (event) {
         event.preventDefault();
         const size1 = $(this).attr("size");
-        //console.log(size);
-        var size2=$(".btnAdd").attr("size");
-        size2=size1;
-        console.log(size2); 
-
+        console.log(size);
     });
 
 
@@ -129,7 +125,7 @@ $(document).ready(function () {
         if (existingItem) {
             existingItem.quantity++;
         } else {
-            const shopping = new Shopping(image, title, price,size);
+            const shopping = new Shopping(image, title, price);
             addedItems.push(shopping);
             ui.addToCart(shopping);
         }
