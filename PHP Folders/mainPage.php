@@ -44,6 +44,7 @@ $bestSellers= [
 <html lang="en">
 <head>
     <?php include("Partials/header.php")?>
+    
 
 </head>
 <body>
@@ -68,10 +69,10 @@ $bestSellers= [
        <p class="pricefirst" style="text-decoration:line-through;"><?php echo $bestseller["oldPrice"]."$"?></p>
        <p class="pricesecond price" id="sell"> <?php echo $bestseller["price"]."$"?></p>
        <div class="btn-group">
-         <button class="btn btn-secondary btn-sm dropdown-toggle Size" id="seeSize"   type="button" data-bs-toggle="dropdown" aria-expanded="false">
+         <button class="btn  btn-sm dropdown-toggle Size btnSize" id="seeSize"   type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color:#8660f8; color:white; margin:auto; margin-top:30px; width:55px;">
             SIZE
           </button>
-           <ul class="dropdown-menu">
+           <ul class="dropdown-menu" style="text-align:center;">
            <li><a class="dropdown-item"  size ="XS" href="#">XS</a></li>
            <li><a class="dropdown-item"  size ="S" href="#">S</a></li>
            <li><a class="dropdown-item"  size ="M" href="#">M</a></li>
@@ -79,11 +80,22 @@ $bestSellers= [
            <li><a class="dropdown-item"  size ="XL" href="#">XL</a></li>
            </ul>
        </div>
-       <a name="<?php echo $bestseller["card-title"]?>" res="<?php echo $bestseller["image"]?>"  price=<?php echo $bestseller["price"]?> size="0" class="btn btn-danger text-white btnAdd addBtColor"  href="#" style="margin-top:55px ;">Add to Cart</a>
+       <a name="<?php echo $bestseller["card-title"]?>" res="<?php echo $bestseller["image"]?>"  price=<?php echo $bestseller["price"]?> size="0" class="btn btn-danger text-white btnAdd addBtColor"  href="#" style="margin-top:30px ;">Add to Cart</a>
      </div>
    </div>
    <?php endforeach; ?> 
 <!-- BEST SELLERS-->
+<style>
+      .alert{
+        visibility:hidden;
+       -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+
+      }
+  </style>
+<div class="fixed-top" id="alert" style="text-align: center; color:white; background-color:#8660f8;">
+<b></b>
+</div>
 
 
 

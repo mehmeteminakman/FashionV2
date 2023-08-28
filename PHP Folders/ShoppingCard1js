@@ -130,5 +130,7 @@ $(document).ready(function () {
         ui.cardCount();
         ui.updateTotalPrice();
         ui.updateLocalStorage();
+        document.getElementById("alert").innerHTML=`<b>${"Added to cart"} --> ${title}   ${size}  ${price}$ </b>`; 
+        setTimeout(function() {document.getElementById("alert").innerHTML='';},2500);
     });
 });
