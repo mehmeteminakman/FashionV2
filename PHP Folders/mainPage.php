@@ -31,6 +31,10 @@ $bestSellers= [
 ]
 ]
 ?>
+<?php
+
+$pdo=null;
+?>
 
 
 
