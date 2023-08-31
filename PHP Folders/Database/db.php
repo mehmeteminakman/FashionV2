@@ -1,5 +1,4 @@
 <?php
-
 class Database{
 
     private $mySqlHost="localhost";
@@ -7,14 +6,15 @@ class Database{
     private $mySqlUserPassword="";
     private $mySqlUserName="root";
     private $mySqlCharSet="UTF8";
-
-
-public function _construct(){
+public function _openDb($a,$b,$c,$d){
 $Sql="mysql:host=".$this->mySqlHost.";dbname=".$this->mySqlDbName.";charset=".$this->mySqlCharSet;
 try {
-  $pdo=new \PDO($Sql,$this->mySqlUserName,$this->mySqlUserPassword);
-  $this->$pdo->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE,\PDO::FETCH_OBJ);
- 
+  $conn=new PDO($Sql,$this->mySqlUserName,$this->mySqlUserPassword);
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+ $sql= "INSERT INTO products(ProductsID,ProductsTitle,ProductsOldPrice,ProductsPrice,Productsİmage) 
+  VALUES (null,$a,$b,$c,$d)";
+  $conn ->exec($sql); 
 } catch (\Throwable $th) {
 
  die("PDO ile veritabanina baglanilamadi.".$th->getMessage());
@@ -23,15 +23,7 @@ try {
 
 
 public function _closeDb(){
-  $this.$pdo=null; 
+  $conn=null;
  }
-
-
-
 }
-
-
-
-
-
 ?>

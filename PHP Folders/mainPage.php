@@ -1,12 +1,14 @@
 <?php
 
+use Database as GlobalDatabase;
+
 $bestSellers= [
 [
   "id"=>1,
-  "card-title"=>"THE ROLLING STONES T-SHIRT",
+  "card-title"=>'THE ROLLING STONES T-SHIRT',
   "oldPrice"=>100,
   "price"=>80,
-  "image"=>"http://localhost/proje1/PHP%20Folders/Resimler1/ürün1.jpg"
+  "image"=>'http://localhost/proje1/PHP%20Folders/Resimler1/ürün1.jpg'
 ],
 [
   "id"=>2,
@@ -29,12 +31,14 @@ $bestSellers= [
   "price"=>60,
   "image"=>"http://localhost/proje1/PHP%20Folders/Resimler1/urun7.jpg"
 ]
-]
-?>
-<?php
+];
 
-$pdo=null;
+ 
+
+
+
 ?>
+
 
 
 
@@ -89,17 +93,115 @@ $pdo=null;
    </div>
    <?php endforeach; ?> 
 <!-- BEST SELLERS-->
-<style>
-      .alert{
-        visibility:hidden;
-       -webkit-animation: fadeIn 1s;
-        animation: fadeIn 1s;
-
-      }
-  </style>
+<!-- ADDED TO CART POPUP -->
 <div class="fixed-top" id="alert" style="text-align: center; color:white; background-color:#8660f8;">
 <b></b>
 </div>
+<!-- ADDED TO CART POPUP -->
+
+
+
+
+<?php 
+class Database{
+
+    private $mySqlHost="localhost";
+    private $mySqlDbName="fashion";
+    private $mySqlUserPassword="";
+    private $mySqlUserName="root";
+    private $mySqlCharSet="UTF8";
+public function _openDb(string $tit,int $old,int $pri, string $img){
+$Sql="mysql:host=".$this->mySqlHost.";dbname=".$this->mySqlDbName.";charset=".$this->mySqlCharSet;
+try {
+  $conn=new PDO($Sql,$this->mySqlUserName,$this->mySqlUserPassword);
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+ $sql= "INSERT INTO products(ProductsID,ProductsTitle,ProductsOldPrice,ProductsPrice,Productsİmage) 
+  VALUES (null,$tit,$old,$pri,$img)";
+  $conn ->exec($sql); 
+} catch (\Throwable $th) {
+
+ die("PDO ile veritabanina baglanilamadi.".$th->getMessage());
+}
+}
+
+
+public function _closeDb(){
+  $conn=null;
+ }
+}
+
+
+$Insert=new GlobalDatabase();
+
+// foreach ($bestSellers as $z): {}
+
+// // $title=$z["card-title"];
+// // $oldPrice=$z["oldPrice"];
+// // $price=$z["price"];
+// // $image=$z["image"];
+// // echo($title.$image);
+
+
+// endforeach;
+$datbase->_openDb('TITLE5',100,80,'IMAGE5.jpg');
+$Insert->_closeDb();
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
