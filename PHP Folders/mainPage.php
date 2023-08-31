@@ -1,45 +1,91 @@
 <?php
 
-use Database as GlobalDatabase;
-
 $bestSellers= [
-[
-  "id"=>1,
-  "card-title"=>'THE ROLLING STONES T-SHIRT',
-  "oldPrice"=>100,
-  "price"=>80,
-  "image"=>'http://localhost/proje1/PHP%20Folders/Resimler1/ürün1.jpg'
-],
-[
-  "id"=>2,
-  "card-title"=>"FOO FIGHTERS T-SHIRT",
-  "oldPrice"=>110,
-  "price"=>60,
-  "image"=>"http://localhost/proje1/PHP%20Folders/Resimler1/ürün2.jpg"
-],
-[
-  "id"=>3,
-  "card-title"=>"ONE PIECE  T-SHIRT",
-  "oldPrice"=>120,
-  "price"=>60,
-  "image"=>"http://localhost/proje1/PHP%20Folders/Resimler1/ürün4.jpg"
-],
-[
+  [
+    "id"=>1,
+    "card-title"=>'THE ROLLING STONES T-SHIRT',
+    "oldPrice"=>100,
+    "price"=>80,
+    "image"=>'http://localhost/proje1/PHP%20Folders/Resimler1/ürün1.jpg'
+    ],
+    [
+      "id"=>2,
+      "card-title"=>"FOO FIGHTERS T-SHIRT",
+      "oldPrice"=>110,
+      "price"=>60,
+      "image"=>"http://localhost/proje1/PHP%20Folders/Resimler1/ürün2.jpg"
+      ],
+      [
+        "id"=>3,
+        "card-title"=>"ONE PIECE  T-SHIRT",
+        "oldPrice"=>120,
+        "price"=>60,
+        "image"=>"http://localhost/proje1/PHP%20Folders/Resimler1/ürün4.jpg"
+        ],
+        [
   "id"=>4,
   "card-title"=>"GREEN T-SHIRT GARMENT DYED EMBROIDERED",
   "oldPrice"=>105,
   "price"=>60,
   "image"=>"http://localhost/proje1/PHP%20Folders/Resimler1/urun7.jpg"
-]
-];
-
- 
-
+  ]
+  ];
+  ?>
 
 
-?>
-
-
+<!--ADD MYSQL -->
+  <?php 
+  // class Database{
+  
+  //     private $mySqlHost="localhost";
+  //     private $mySqlDbName="fashion";
+  //     private $mySqlUserPassword="";
+  //     private $mySqlUserName="root";
+  //     private $mySqlCharSet="UTF8";
+  // public function _openDb($title,$old,$price,$proImage){
+  // $Sql="mysql:host=".$this->mySqlHost.";dbname=".$this->mySqlDbName.";charset=".$this->mySqlCharSet;
+  // try {
+  //   $conn=new PDO($Sql,$this->mySqlUserName,$this->mySqlUserPassword);
+  //   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  
+  //  $sql= $conn-> prepare("INSERT INTO produts(ProductsTitle,ProductsOldPrice,ProductsPrice,ProductsImage) 
+  //  VALUES (:title,:old,:price,:proImage)"); 
+  //  $sql ->bindParam(':title',$title, PDO::PARAM_STR);
+  //  $sql ->bindParam(':old',$old, PDO::PARAM_INT);
+  //  $sql->bindParam(':price',$price,PDO::PARAM_INT);
+  //  $sql->bindParam(':proImage',$proImage,PDO::PARAM_STR);
+  // $sql->execute();
+  // } catch (\Throwable $th) {
+  
+  //  die("PDO ile veritabanina baglanilamadi.".$th->getMessage());
+  // }
+  // }
+  
+  
+  // public function _closeDb(){
+  //   $conn=null;
+  //  }
+  // }
+  
+  
+  // $Insert=new Database();
+  
+  // foreach ($bestSellers as $z): {}
+  
+  // $title=$z["card-title"];
+  // $oldPrice=$z["oldPrice"];
+  // $price=$z["price"];
+  // $image=$z["image"];
+  // $Insert->_openDb($title,$oldPrice,$price,$image);
+  
+  
+  
+  // endforeach;
+  // $Insert->_closeDb();
+  
+  
+  ?>
+<!--ADD MYSQL -->
 
 
 
@@ -102,53 +148,6 @@ $bestSellers= [
 
 
 
-<?php 
-class Database{
-
-    private $mySqlHost="localhost";
-    private $mySqlDbName="fashion";
-    private $mySqlUserPassword="";
-    private $mySqlUserName="root";
-    private $mySqlCharSet="UTF8";
-public function _openDb(string $tit,int $old,int $pri, string $img){
-$Sql="mysql:host=".$this->mySqlHost.";dbname=".$this->mySqlDbName.";charset=".$this->mySqlCharSet;
-try {
-  $conn=new PDO($Sql,$this->mySqlUserName,$this->mySqlUserPassword);
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
- $sql= "INSERT INTO products(ProductsID,ProductsTitle,ProductsOldPrice,ProductsPrice,Productsİmage) 
-  VALUES (null,$tit,$old,$pri,$img)";
-  $conn ->exec($sql); 
-} catch (\Throwable $th) {
-
- die("PDO ile veritabanina baglanilamadi.".$th->getMessage());
-}
-}
-
-
-public function _closeDb(){
-  $conn=null;
- }
-}
-
-
-$Insert=new GlobalDatabase();
-
-// foreach ($bestSellers as $z): {}
-
-// // $title=$z["card-title"];
-// // $oldPrice=$z["oldPrice"];
-// // $price=$z["price"];
-// // $image=$z["image"];
-// // echo($title.$image);
-
-
-// endforeach;
-$datbase->_openDb('TITLE5',100,80,'IMAGE5.jpg');
-$Insert->_closeDb();
-
-
-?>
 
 
 
